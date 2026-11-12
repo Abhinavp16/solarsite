@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -29,12 +29,15 @@
         <span>HelioGrid</span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="#admin">Admin Panel</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="#admin" data-i18n="nav.admin">Admin Panel</a>
       </nav>
-      <a class="header-cta" href="#contact">Get Quote</a>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" data-i18n="lang.toggle">हिंदी</button>
+        <a class="header-cta" href="#contact" data-i18n="header.cta">Get Quote</a>
+      </div>
     </header>
 
     <main>
@@ -42,29 +45,29 @@
         <div class="hero-content">
           <div class="hero-badge">
             <span></span>
-            Live solar design, installation, and CRM tracking
+            <bdi data-i18n="hero.badge">Live solar design, installation, and CRM tracking</bdi>
           </div>
-          <p class="eyebrow">Solar systems for homes, factories, and businesses</p>
-          <h1>Build a brighter roof with intelligent solar power.</h1>
-          <p class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Solar systems for homes, factories, and businesses</p>
+          <h1 data-i18n="hero.title">Build a brighter roof with intelligent solar power.</h1>
+          <p class="hero-copy" data-i18n="hero.copy">
             We design, install, and monitor high-efficiency solar panel systems that cut electricity bills and create cleaner energy independence.
           </p>
           <div class="hero-actions">
-            <a class="primary-btn" href="#contact">Book Free Survey</a>
-            <a class="secondary-btn" href="#services">Explore Services</a>
+            <a class="primary-btn" href="#contact" data-i18n="hero.ctaSurvey">Book Free Survey</a>
+            <a class="secondary-btn" href="#services" data-i18n="hero.ctaServices">Explore Services</a>
           </div>
           <div class="hero-stats" aria-label="Company statistics">
             <div>
               <strong>12.8MW</strong>
-              <span>Solar deployed</span>
+              <span data-i18n="stat.deployed">Solar deployed</span>
             </div>
             <div>
               <strong>1,450+</strong>
-              <span>Happy customers</span>
+              <span data-i18n="stat.customers">Happy customers</span>
             </div>
             <div>
               <strong>30%</strong>
-              <span>Avg. bill savings</span>
+              <span data-i18n="stat.savings">Avg. bill savings</span>
             </div>
           </div>
         </div>
@@ -80,124 +83,193 @@
           <div class="energy-ring ring-one"></div>
           <div class="energy-ring ring-two"></div>
           <div class="floating-card card-savings">
-            <small>Monthly savings</small>
+            <small data-i18n="card.savings">Monthly savings</small>
             <strong>Rs 18,400</strong>
           </div>
           <div class="floating-card card-output">
-            <small>Live output</small>
+            <small data-i18n="card.output">Live output</small>
             <strong>42.6 kW</strong>
           </div>
         </div>
       </section>
 
       <section class="trust-strip section-shell" aria-label="Solar agency highlights">
-        <div><strong>MNRE</strong><span>Compliant designs</span></div>
-        <div><strong>25 yrs</strong><span>Panel warranty</span></div>
-        <div><strong>Zero</strong><span>Hidden charges</span></div>
-        <div><strong>360 deg</strong><span>Project tracking</span></div>
+        <div><strong>MNRE</strong><span data-i18n="trust.mnre">Compliant designs</span></div>
+        <div><strong data-i18n="trust.warrantyValue">25 yrs</strong><span data-i18n="trust.warranty">Panel warranty</span></div>
+        <div><strong data-i18n="trust.chargesValue">Zero</strong><span data-i18n="trust.charges">Hidden charges</span></div>
+        <div><strong data-i18n="trust.trackingValue">360 deg</strong><span data-i18n="trust.tracking">Project tracking</span></div>
       </section>
 
       <section id="about" class="about section-shell">
         <div>
-          <p class="eyebrow">About us</p>
-          <h2>Engineering-led solar agency with transparent delivery.</h2>
+          <p class="eyebrow" data-i18n="about.eyebrow">About us</p>
+          <h2 data-i18n="about.title">Engineering-led solar agency with transparent delivery.</h2>
         </div>
         <div class="about-card glass-card">
-          <p>
+          <p data-i18n="about.p1">
             HelioGrid helps property owners switch to solar with feasibility studies, custom panel layouts, subsidy guidance, installation, and long-term performance tracking.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Our team combines electrical engineering, rooftop safety, and data monitoring to deliver solar assets that look sharp and perform reliably for decades.
           </p>
           <div class="about-points">
-            <span>Rooftop scan</span>
-            <span>ROI simulation</span>
-            <span>Subsidy support</span>
+            <span data-i18n="about.tag1">Rooftop scan</span>
+            <span data-i18n="about.tag2">ROI simulation</span>
+            <span data-i18n="about.tag3">Subsidy support</span>
           </div>
         </div>
       </section>
 
       <section id="services" class="services section-shell">
-        <p class="eyebrow">Services</p>
-        <h2>Complete solar solutions from survey to savings.</h2>
+        <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
+        <h2 data-i18n="services.title">Complete solar solutions from survey to savings.</h2>
         <div class="service-grid">
           <article class="service-card">
             <div class="service-icon">HM</div>
             <span>01</span>
-            <h3>Residential Solar</h3>
-            <p>Rooftop systems, net metering support, battery-ready wiring, and elegant panel layouts for homes.</p>
+            <h3 data-i18n="s1.title">Residential Solar</h3>
+            <p data-i18n="s1.copy">Rooftop systems, net metering support, battery-ready wiring, and elegant panel layouts for homes.</p>
           </article>
           <article class="service-card">
             <div class="service-icon">KW</div>
             <span>02</span>
-            <h3>Commercial Solar</h3>
-            <p>High-capacity solar plants for offices, schools, warehouses, hospitals, and industrial units.</p>
+            <h3 data-i18n="s2.title">Commercial Solar</h3>
+            <p data-i18n="s2.copy">High-capacity solar plants for offices, schools, warehouses, hospitals, and industrial units.</p>
           </article>
           <article class="service-card">
             <div class="service-icon">FX</div>
             <span>03</span>
-            <h3>Maintenance</h3>
-            <p>Cleaning, inverter checks, fault detection, generation reports, and annual performance audits.</p>
+            <h3 data-i18n="s3.title">Maintenance</h3>
+            <p data-i18n="s3.copy">Cleaning, inverter checks, fault detection, generation reports, and annual performance audits.</p>
           </article>
           <article class="service-card">
             <div class="service-icon">ROI</div>
             <span>04</span>
-            <h3>Energy Consulting</h3>
-            <p>Load analysis, ROI forecasts, subsidy documentation, financing help, and carbon reduction planning.</p>
+            <h3 data-i18n="s4.title">Energy Consulting</h3>
+            <p data-i18n="s4.copy">Load analysis, ROI forecasts, subsidy documentation, financing help, and carbon reduction planning.</p>
           </article>
+        </div>
+      </section>
+
+      <section id="calculator" class="calculator section-shell">
+        <div class="calc-intro">
+          <p class="eyebrow" data-i18n="calc.eyebrow">Subsidy calculator</p>
+          <h2 data-i18n="calc.title">How much will solar cost you?</h2>
+          <p data-i18n="calc.copy">
+            Enter your monthly electricity bill. We'll estimate the system size, PM Surya Ghar + Chhattisgarh subsidy
+            and what you actually pay.
+          </p>
+
+          <form class="calc-form glass-card" id="calcForm" novalidate>
+            <label>
+              <span data-i18n="calc.bill">Monthly electricity bill (₹)</span>
+              <input name="bill" type="number" inputmode="numeric" min="300" step="50" placeholder="3000" required />
+            </label>
+            <label>
+              <span data-i18n="calc.property">Property type</span>
+              <select name="property">
+                <option value="home" data-i18n="calc.home">Home</option>
+                <option value="commercial" data-i18n="calc.commercial">Shop / Office / Factory</option>
+              </select>
+            </label>
+            <button class="primary-btn" type="submit" data-i18n="calc.submit">Calculate</button>
+            <p class="calc-error" id="calcError" role="alert"></p>
+          </form>
+        </div>
+
+        <div class="calc-output glass-card" aria-live="polite">
+          <p class="calc-empty" id="calcEmpty" data-i18n="calc.empty">Enter your bill to see the estimate.</p>
+
+          <div id="calcResults" hidden>
+            <div class="calc-hero">
+              <div>
+                <span data-i18n="calc.size">Recommended system</span>
+                <strong id="calcKw">–</strong>
+              </div>
+              <div class="calc-net">
+                <span data-i18n="calc.net">Your cost</span>
+                <strong id="calcNet">–</strong>
+              </div>
+            </div>
+
+            <dl class="calc-rows">
+              <div><dt data-i18n="calc.cost">Total cost</dt><dd id="calcCost">–</dd></div>
+              <div class="subsidy-row"><dt data-i18n="calc.central">Central subsidy</dt><dd id="calcCentral">–</dd></div>
+              <div class="subsidy-row"><dt data-i18n="calc.state">Chhattisgarh subsidy</dt><dd id="calcState">–</dd></div>
+              <div><dt data-i18n="calc.savings">Monthly savings</dt><dd id="calcSavings">–</dd></div>
+              <div><dt data-i18n="calc.payback">Payback</dt><dd id="calcPayback">–</dd></div>
+            </dl>
+            <p class="calc-note" id="calcNoSubsidy" data-i18n="calc.noSubsidy" hidden>
+              PM Surya Ghar subsidy is for homes only. Businesses save through lower bills and tax depreciation.
+            </p>
+
+            <div class="calc-actions">
+              <a class="primary-btn whatsapp-btn" id="calcWhatsapp" href="#" target="_blank" rel="noopener">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-whatsapp" /></svg>
+                <span data-i18n="calc.ctaWhatsapp">Get exact quote on WhatsApp</span>
+              </a>
+              <button class="secondary-btn" id="calcSurvey" type="button" data-i18n="calc.ctaSurvey">
+                Book free site survey
+              </button>
+            </div>
+          </div>
+
+          <p class="calc-disclaimer" data-i18n="calc.disclaimer">
+            Estimate only. Final price and subsidy depend on the site survey and current PM Surya Ghar / state rules.
+          </p>
         </div>
       </section>
 
       <section id="contact" class="contact section-shell">
         <div class="contact-copy">
-          <p class="eyebrow">Lead generation</p>
-          <h2>Request a free solar consultation.</h2>
-          <p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Lead generation</p>
+          <h2 data-i18n="contact.title">Request a free solar consultation.</h2>
+          <p data-i18n="contact.copy">
             Submit the form and your lead will appear in the admin panel with status tracking, system size, budget, and source data.
           </p>
           <div class="contact-strip">
-            <span>24 hour callback</span>
-            <span>Free site survey</span>
-            <span>ROI estimate</span>
+            <span data-i18n="contact.chip1">24 hour callback</span>
+            <span data-i18n="contact.chip2">Free site survey</span>
+            <span data-i18n="contact.chip3">ROI estimate</span>
           </div>
           <div class="quote-card glass-card">
-            <span>Typical payback</span>
-            <strong>3.5 - 5 years</strong>
-            <p>Based on rooftop area, tariff, net metering, and usage pattern.</p>
+            <span data-i18n="quote.label">Typical payback</span>
+            <strong data-i18n="quote.value">3.5 - 5 years</strong>
+            <p data-i18n="quote.copy">Based on rooftop area, tariff, net metering, and usage pattern.</p>
           </div>
         </div>
 
         <form class="lead-form glass-card" id="leadForm">
           <div class="form-header full-field">
-            <span>New solar inquiry</span>
-            <strong>Free Consultation</strong>
+            <span data-i18n="form.header">New solar inquiry</span>
+            <strong data-i18n="form.headerStrong">Free Consultation</strong>
           </div>
           <label>
-            Full name
-            <input name="name" type="text" placeholder="Your name" required />
+            <span data-i18n="form.name">Full name</span>
+            <input name="name" type="text" placeholder="Your name" data-i18n-placeholder="form.namePh" required />
           </label>
           <label>
-            Phone number
+            <span data-i18n="form.phone">Phone number</span>
             <input name="phone" type="tel" placeholder="98765 43210" required />
           </label>
           <label>
-            Email
+            <span data-i18n="form.email">Email</span>
             <input name="email" type="email" placeholder="you@example.com" required />
           </label>
           <label>
-            Property type
+            <span data-i18n="form.property">Property type</span>
             <select name="property" required>
-              <option value="">Select property</option>
-              <option>Home</option>
-              <option>Commercial</option>
-              <option>Factory</option>
-              <option>Institution</option>
+              <option value="" data-i18n="form.selectProperty">Select property</option>
+              <option value="Home" data-i18n="form.home">Home</option>
+              <option value="Commercial" data-i18n="form.commercial">Commercial</option>
+              <option value="Factory" data-i18n="form.factory">Factory</option>
+              <option value="Institution" data-i18n="form.institution">Institution</option>
             </select>
           </label>
           <label>
-            Required system size
+            <span data-i18n="form.size">Required system size</span>
             <select name="systemSize" required>
-              <option value="">Select size</option>
+              <option value="" data-i18n="form.selectSize">Select size</option>
               <option value="3">3 kW</option>
               <option value="5">5 kW</option>
               <option value="10">10 kW</option>
@@ -206,21 +278,21 @@
             </select>
           </label>
           <label>
-            Budget range
+            <span data-i18n="form.budget">Budget range</span>
             <select name="budget" required>
-              <option value="">Select budget</option>
-              <option>Under Rs 2 lakh</option>
-              <option>Rs 2-5 lakh</option>
-              <option>Rs 5-10 lakh</option>
-              <option>Rs 10 lakh+</option>
+              <option value="" data-i18n="form.selectBudget">Select budget</option>
+              <option value="Under Rs 2 lakh" data-i18n="form.budget1">Under Rs 2 lakh</option>
+              <option value="Rs 2-5 lakh" data-i18n="form.budget2">Rs 2-5 lakh</option>
+              <option value="Rs 5-10 lakh" data-i18n="form.budget3">Rs 5-10 lakh</option>
+              <option value="Rs 10 lakh+" data-i18n="form.budget4">Rs 10 lakh+</option>
             </select>
           </label>
           <label class="full-field">
-            Message
-            <textarea name="message" rows="4" placeholder="Tell us your location and electricity bill amount"></textarea>
+            <span data-i18n="form.message">Message</span>
+            <textarea name="message" rows="4" placeholder="Tell us your location and electricity bill amount" data-i18n-placeholder="form.messagePh"></textarea>
           </label>
           <input name="source" type="hidden" value="Website Contact Form" />
-          <button class="primary-btn full-field" type="submit">Generate Lead</button>
+          <button class="primary-btn full-field" type="submit" data-i18n="form.submit">Generate Lead</button>
           <p class="form-message" id="formMessage" role="status"></p>
         </form>
       </section>
@@ -296,9 +368,35 @@
 
     <footer class="site-footer">
       <span>HelioGrid Solar Agency</span>
-      <span>Clean energy. Clear tracking. Better conversions.</span>
+      <span data-i18n="footer.tagline">Clean energy. Clear tracking. Better conversions.</span>
     </footer>
 
+    <div class="float-actions">
+      <a class="float-btn float-call" id="floatCall" href="#" data-i18n-aria="float.call">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path
+            d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"
+          />
+        </svg>
+      </a>
+      <a class="float-btn float-whatsapp" id="floatWhatsapp" href="#" target="_blank" rel="noopener" data-i18n-aria="float.whatsapp">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-whatsapp" /></svg>
+      </a>
+    </div>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5.1 5.24-1.37A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.1.82.83-3.03-.2-.31a8.2 8.2 0 1 1 6.95 3.85zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.54.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.16.04-.3-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.56-.42h-.48a.92.92 0 0 0-.66.31 2.8 2.8 0 0 0-.87 2.07 4.8 4.8 0 0 0 1 2.56 11 11 0 0 0 4.2 3.7c1.57.68 2.18.74 2.96.62.48-.07 1.46-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.17-.47-.29z"
+        />
+      </symbol>
+    </svg>
+
     <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/site.js"></script>
   </body>
 </html>
